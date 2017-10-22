@@ -1,7 +1,9 @@
-package com.wangweijun.standarddevelop;
+package com.wangweijun.standarddevelop.appmodule.home;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.wangweijun.standarddevelop.R;
 
 public class MainActivity extends Activity {
 
