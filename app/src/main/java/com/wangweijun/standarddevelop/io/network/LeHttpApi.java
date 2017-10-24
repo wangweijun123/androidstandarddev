@@ -2,8 +2,11 @@ package com.wangweijun.standarddevelop.io.network;
 
 import android.util.Log;
 
+import com.wangweijun.standarddevelop.model.IResponse;
+import com.wangweijun.standarddevelop.model.RankListModel;
 import com.wangweijun.standarddevelop.model.Repo;
 
+import java.io.IOException;
 import java.util.List;
 
 import retrofit2.Call;
@@ -19,6 +22,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class LeHttpApi {
 
     public static final String TAG = LeHttpApi.class.getSimpleName();
+
+    public static final String URL_BASIC_SERVICE_TEST = "http://mapi.letvstore.com/";
 
     /**
      * api 测试
@@ -47,5 +52,27 @@ public class LeHttpApi {
                 Log.i(TAG, "error");
             }
         });
+    }
+
+    /**
+     * 异步请求
+     * @throws IOException
+     */
+    public static void doGetAsync(Callback<IResponse<RankListModel>> callback) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(URL_BASIC_SERVICE_TEST)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(OkHttpUtils.getInstance().getOkHttpClient())
+                .build();
+        // 使用retrofit创建一个api接口对象(retrofit newProxyInstance)
+        StoreService service = retrofit.create(StoreService.class);
+        // pagefrom=1&pagesize=1&code=RANK_HOT";
+        // retrofit (代理对象调用doget方法，返回ExecutorCallbackCall(其实就是OkhttpCall对象)))
+        Call<IResponse<RankListModel>> call = service.doGet("1", "20", "RANK_HOT");
+
+
+
+        Log.i(TAG, "id callback:"+callback);
+        call.enqueue(callback);
     }
 }
