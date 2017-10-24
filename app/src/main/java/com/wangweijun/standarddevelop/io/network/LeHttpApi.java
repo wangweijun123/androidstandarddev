@@ -68,7 +68,7 @@ public class LeHttpApi {
         StoreService service = retrofit.create(StoreService.class);
         // pagefrom=1&pagesize=1&code=RANK_HOT";
         // retrofit (代理对象调用doget方法，返回ExecutorCallbackCall(其实就是OkhttpCall对象)))
-        Call<IResponse<RankListModel>> call = service.doGet("1", "20", "RANK_HOT");
+        Call<IResponse<RankListModel>> call = service.doGet("1", "50", "RANK_HOT");
 
 
 
