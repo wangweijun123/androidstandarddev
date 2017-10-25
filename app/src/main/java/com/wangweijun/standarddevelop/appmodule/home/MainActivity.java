@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
         listView  = (ListView)findViewById(R.id.lv);
 
         Glide.with(getApplicationContext())
-                .load("http://i1.letvimg.com//lc05_iptv//201709//19//17//20//tmp3e3e95cf-3bf4-46c1-a36a-95ca33010891256.png")
+                .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436.jpg")
                 .into(iv);
 
         Callback<IResponse<RankListModel>> callback = new Callback<IResponse<RankListModel>>() {
