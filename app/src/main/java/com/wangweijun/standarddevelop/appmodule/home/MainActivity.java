@@ -1,6 +1,7 @@
 package com.wangweijun.standarddevelop.appmodule.home;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -35,6 +36,12 @@ public class MainActivity extends Activity {
 //        LeHttpApi.listRepos();
 
         iv = (ImageView)findViewById(R.id.iv);
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SecondActivity.class));
+            }
+        });
         listView  = (ListView)findViewById(R.id.lv);
 
         Glide.with(getApplicationContext())
