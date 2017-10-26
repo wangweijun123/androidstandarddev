@@ -48,6 +48,7 @@ public class MainActivity extends Activity {
                 .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436.jpg")
                 .into(iv);
 
+
         Callback<IResponse<RankListModel>> callback = new Callback<IResponse<RankListModel>>() {
             @Override
             public void onResponse(Call<IResponse<RankListModel>> call, Response<IResponse<RankListModel>> response) {

@@ -3,15 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="glide api 测试"/>
-    <Button
+        android:text="glide api 测试" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text=""
-        android:id="@+id/iv"/>
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="占位符" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv1"/>
+    </LinearLayout>
 
 
 </LinearLayout>
