@@ -49,8 +49,9 @@ public class MainActivity extends Activity {
 //                .into(iv);
 
         GlideApp.with(getApplicationContext())
-                .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436.jpg")
+                .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436ddddddd.jpg")
                 .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.error)
                 .into(iv);
 
 

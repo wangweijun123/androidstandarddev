@@ -6,32 +6,28 @@
     <application
         android:name=".LeApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/error"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".appmodule.home.MainActivity">
+        <activity android:name=".appmodule.home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
 
 
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <!--<category android:name="android.intent.category.DEFAULT" /> <写在这里会引起图标没看见,写两个filter>
                 <data
                     android:host="my.com"
                     android:scheme="m" />
                 <data
                     android:host="my.com"
-                    android:scheme="htt" />
+                    android:scheme="htt" />-->
             </intent-filter>
-        </activity>-->
+        </activity>
 
 
-        <activity
+        <!--<activity
             android:name=".appmodule.home.MainActivity"
             android:exported="true">
             <intent-filter android:autoVerify="true">
@@ -41,25 +37,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "http://www.example.com/gizmos”
-                 app与域名关联，在服务器端配置https://www.example.net/.well-known/assetlinks.json-->
+                &lt;!&ndash; Accepts URIs that begin with "http://www.example.com/gizmos”
+                 app与域名关联，在服务器端配置https://www.example.net/.well-known/assetlinks.json&ndash;&gt;
                 <data
                     android:host="www.example.com"
                     android:pathPrefix="/gizmos"
                     android:scheme="http" />
-                <!-- note that the leading "/" is required for pathPrefix-->
+                &lt;!&ndash; note that the leading "/" is required for pathPrefix&ndash;&gt;
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "example://gizmos” -->
+                &lt;!&ndash; Accepts URIs that begin with "example://gizmos” &ndash;&gt;
                 <data
                     android:host="gizmos"
                     android:scheme="example" />
             </intent-filter>
-        </activity>
+        </activity>-->
 
 
         <activity android:name=".appmodule.home.SecondActivity">
