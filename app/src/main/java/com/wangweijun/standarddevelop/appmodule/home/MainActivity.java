@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import com.wangweijun.standarddevelop.GlideApp;
 import com.wangweijun.standarddevelop.R;
 import com.wangweijun.standarddevelop.io.network.LeHttpApi;
 import com.wangweijun.standarddevelop.model.IResponse;
@@ -44,8 +44,13 @@ public class MainActivity extends Activity {
         });
         listView  = (ListView)findViewById(R.id.lv);
 
-        Glide.with(getApplicationContext())
+//        Glide.with(getApplicationContext())
+//                .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436.jpg")
+//                .into(iv);
+
+        GlideApp.with(getApplicationContext())
                 .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436.jpg")
+                .placeholder(R.mipmap.ic_launcher)
                 .into(iv);
 
 
@@ -115,7 +120,8 @@ public class MainActivity extends Activity {
 
     private void setValue(ViewHolder viewHolder, RankRecommedModel model) {
         viewHolder.title_view.setText(model.name);
-        Glide.with(getApplicationContext()).load(model.icon.url)
+        GlideApp.with(getApplicationContext()).load(model.icon.url)
+                .placeholder(R.mipmap.ic_launcher)
                 .into(viewHolder.photo_view);
     }
 
