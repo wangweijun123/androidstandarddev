@@ -44,9 +44,7 @@ public class MainActivity extends Activity {
         });
         listView  = (ListView)findViewById(R.id.lv);
 
-//        Glide.with(getApplicationContext())
-//                .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436.jpg")
-//                .into(iv);
+
 
         GlideApp.with(getApplicationContext())
                 .load("http://img1.dzwww.com:8080/tupian_pl/20150813/16/7858995348613407436ddddddd.jpg")
